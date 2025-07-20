@@ -1,7 +1,7 @@
 resource "aws_security_group" "main" {
   name        = var.sg_name
   description = var.sg_description
-  vpc_id      = vpc.main.id
+  vpc_id      = aws_vpc.main.id
 
   tags = merge(
     var.sg_tags,
